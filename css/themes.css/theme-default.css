@@ -1,0 +1,57 @@
+:root {
+    /* Color palettes */
+    --bg-primary: #121a23;
+    --bg-secondary: #1a2430;
+    --bg-tertiary: #21303f;
+    
+    --accent-primary: #8eb8e5;
+    --accent-secondary: #c3daf0;
+    --accent-tertiary: #d1b48c;
+    
+    /* Terminal colors */
+    --terminal-fg: #d6e4f0;
+    --terminal-bg: #121a23;
+    --terminal-dim: #7090b0;
+    --terminal-highlight: #f0f5fa;
+    --terminal-active: #a0c0e0;
+    --terminal-hover: #bbd0f0;
+    
+    /* Text colors */
+    --text-primary: #d6e4f0;
+    --text-secondary: #a0c0e0;
+    --text-muted: #7090b0;
+    
+    /* Magic colors */
+    --magic-blue: #8eb8e5;
+    --magic-purple: #9c89b8;
+    --magic-gold: #d1b48c;
+    --magic-green: #9cbe9c;
+    --spell-red: #e57373;
+    
+    /* Typography */
+    --font-serif: 'EB Garamond', 'Cormorant Garamond', serif;
+    --font-sans: 'Quicksand', sans-serif;
+    
+    /* Spacing */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+    --space-xl: 4rem;
+    
+    /* Elements */
+    --border-thin: 1px solid var(--magic-blue);
+    --border-thick: 2px solid var(--magic-purple);
+    --border-dashed: 1px dashed var(--magic-gold);
+    --shadow-subtle: 0 0 8px rgba(142, 184, 229, 0.2);
+    --shadow-glow: 0 0 15px rgba(156, 137, 184, 0.4);
+    --magic-border: 0.1rem solid rgba(142, 184, 229, 0.3);
+    --magic-shadow: 0 0 10px rgba(142, 184, 229, 0.15);
+    
+    /* Animation */
+    --fade-duration: 3s;
+    
+    /* Layout */
+    --max-width: 100%;
+    --content-width: 80%;
+  }

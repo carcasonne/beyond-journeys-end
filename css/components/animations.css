@@ -1,0 +1,176 @@
+@keyframes mana-pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+}
+
+@keyframes mana-fade {
+
+    0%,
+    49% {
+        opacity: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 0.3;
+    }
+}
+
+@keyframes dust {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    10% {
+        transform: translate(-2%, -2%);
+    }
+
+    20% {
+        transform: translate(2%, 2%);
+    }
+
+    30% {
+        transform: translate(2%, -2%);
+    }
+
+    40% {
+        transform: translate(-2%, 2%);
+    }
+
+    50% {
+        transform: translate(0, 0);
+    }
+
+    60% {
+        transform: translate(2%, 0);
+    }
+
+    70% {
+        transform: translate(0, 2%);
+    }
+
+    80% {
+        transform: translate(-2%, 0);
+    }
+
+    90% {
+        transform: translate(0, -2%);
+    }
+}
+
+@keyframes frieren-magic {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: scale(0.8);
+        box-shadow: 0 0 5px rgba(142, 184, 229, 0.1);
+    }
+
+    20% {
+        opacity: 0.8;
+        transform: scale(1);
+        box-shadow: 0 0 15px rgba(142, 184, 229, 0.4);
+    }
+
+    40% {
+        opacity: 0.4;
+        transform: scale(1.05);
+        box-shadow: 0 0 10px rgba(142, 184, 229, 0.3);
+    }
+
+    70% {
+        opacity: 0.7;
+        transform: scale(0.95);
+        box-shadow: 0 0 20px rgba(142, 184, 229, 0.5);
+    }
+
+    85% {
+        opacity: 0.3;
+        transform: scale(1.02);
+        box-shadow: 0 0 8px rgba(142, 184, 229, 0.2);
+    }
+}
+
+@keyframes light-sweep {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes remember {
+    0% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes time-ripple {
+    0% {
+        opacity: 0.3;
+        transform: scale(0.95);
+    }
+
+    50% {
+        opacity: 0.15;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+}

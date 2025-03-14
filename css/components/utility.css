@@ -1,0 +1,31 @@
+.highlight {
+    color: var(--magic-blue);
+    font-style: italic;
+    animation: pulse 4s ease-in-out infinite;
+}
+
+.magic-text {
+    font-family: var(--font-serif);
+    font-style: italic;
+    letter-spacing: 0.1em;
+}
+
+.magic-cursor {
+    display: inline-block;
+    width: 0.6rem;
+    height: 1rem;
+    background-color: var(--magic-blue);
+    vertical-align: middle;
+    margin-left: 0.2rem;
+    animation: fade 3s ease-in-out infinite;
+}
+
+.spell-message {
+    font-family: var(--font-serif);
+    color: var(--magic-purple);
+    border-left: 2px solid var(--magic-purple);
+    padding-left: var(--space-md);
+    margin: var(--space-md) 0;
+    font-style: italic;
+    opacity: 0.9;
+}

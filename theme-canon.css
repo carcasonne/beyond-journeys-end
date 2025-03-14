@@ -1,0 +1,231 @@
+/* Frieren Canon Light Theme - Official Palette */
+:root {
+    /* Color palette - exact canon colors inverted for light theme */
+    --bg-primary: #f7f9fc;
+    --bg-secondary: #eef1f7;
+    --bg-tertiary: #e4e8f0;
+    
+    --accent-primary: #8DDEFC; /* sky blue #8DDEFC */
+    --accent-secondary: #CCD3F0; /* lavender #CCD3F0 */
+    --accent-tertiary: #8D7E61; /* warm taupe #8D7E61 */
+    
+    /* Text colors - based on canon palette but for light theme */
+    --terminal-fg: #22262d;
+    --terminal-bg: #f7f9fc;
+    --terminal-dim: #5a6270;
+    --terminal-highlight: #121418;
+    --terminal-active: #4C9057; /* medium green #4C9057 */
+    --terminal-hover: #3a7042; /* darker green */
+    --terminal-code: #3a4150; /* dark code text */
+    
+    /* Additional text colors */
+    --text-primary: #22262d;
+    --text-secondary: #4a5366;
+    --text-muted: #7a8293;
+    
+    /* Canon magic colors */
+    --magic-blue: #69b8d6; /* frieren's signature magic - slightly darkened for contrast */
+    --magic-green: #4C9057; /* medium green magic */
+    --magic-deep-green: #3a7042; /* focused magic - darker */
+    --magic-lavender: #9da3c4; /* ancient spells - slightly darkened */
+    --magic-taupe: #6d614a; /* earth magic - darkened for contrast */
+    --spell-red: #d84f4f; /* forbidden magic */
+    
+    /* Elements */
+    --border-thin: 1px solid rgba(109, 184, 214, 0.5);
+    --border-thick: 2px solid rgba(157, 163, 196, 0.6);
+    --border-dashed: 1px dashed rgba(109, 97, 74, 0.5);
+    --shadow-subtle: 0 0 8px rgba(109, 184, 214, 0.15);
+    --shadow-glow: 0 0 15px rgba(157, 163, 196, 0.25);
+    --magic-border: 0.1rem solid rgba(109, 184, 214, 0.3);
+    --magic-shadow: 0 0 10px rgba(109, 184, 214, 0.1);
+    
+    /* Animation */
+    --fade-duration: 3s;
+    --glitch-duration: 2s;
+  }
+  
+  /* Canon Light-specific elements */
+  body {
+    background-image: 
+      linear-gradient(to bottom, rgba(247, 249, 252, 0.95), rgba(238, 241, 247, 0.95)),
+      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238ddefc' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  
+  body::before {
+    background-image: radial-gradient(circle at 10% 10%, rgba(76, 144, 87, 0.03) 0%, transparent 50%);
+  }
+  
+  .banner {
+    background-color: var(--bg-secondary);
+    background-image: 
+      linear-gradient(to bottom, rgba(238, 241, 247, 0.95), rgba(228, 232, 240, 0.9)),
+      radial-gradient(ellipse at bottom, rgba(76, 144, 87, 0.1), transparent 70%);
+    box-shadow: 0 0 15px rgba(76, 144, 87, 0.1);
+  }
+  
+  .banner::before {
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(141, 222, 252, 0.1) 50px, rgba(141, 222, 252, 0.1) 51px),
+      repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(204, 211, 240, 0.1) 50px, rgba(204, 211, 240, 0.1) 51px);
+  }
+  
+  .banner .mage-light {
+    background: linear-gradient(to bottom,
+        transparent 50%,
+        rgba(76, 144, 87, 0.05) 51%,
+        transparent 52%);
+  }
+  
+  .magic-nav {
+    background-color: rgba(238, 241, 247, 0.85);
+    border-bottom: var(--magic-border);
+    box-shadow: var(--magic-shadow);
+  }
+  
+  .mana-orb {
+    border-color: var(--magic-green);
+    box-shadow: 0 0 12px rgba(76, 144, 87, 0.25);
+  }
+  
+  .mana-orb::before {
+    border-color: var(--magic-green);
+  }
+  
+  .mana-orb::after {
+    background-color: var(--magic-green);
+  }
+  
+  .magic-cursor {
+    background-color: var(--magic-green);
+  }
+  
+  .magic-prompt {
+    color: var(--magic-green);
+  }
+  
+  .mana-status {
+    color: var(--magic-green);
+  }
+  
+  h1, h2, h3, h4 {
+    color: var(--magic-lavender);
+  }
+  
+  h2::after {
+    background: var(--magic-green);
+  }
+  
+  .era.current {
+    color: var(--magic-green);
+  }
+  
+  .highlight {
+    color: var(--magic-blue);
+  }
+  
+  .spell-message {
+    color: var(--magic-lavender);
+    border-left-color: var(--magic-lavender);
+  }
+  
+  blockquote {
+    background-color: rgba(204, 211, 240, 0.15);
+    border-left-color: var(--magic-lavender);
+  }
+  
+  blockquote::before,
+  blockquote::after {
+    color: var(--magic-lavender);
+  }
+  
+  .card {
+    background-color: rgba(238, 241, 247, 0.95);
+  }
+  
+  .grimoire-card {
+    background-color: rgba(245, 247, 250, 0.95);
+    border: var(--magic-border);
+  }
+  
+  .grimoire-card .card-header {
+    background-color: rgba(228, 232, 240, 0.8);
+    color: var(--magic-lavender);
+  }
+  
+  .grimoire-card:hover {
+    box-shadow: 0 0 15px rgba(76, 144, 87, 0.15);
+  }
+  
+  .work-item {
+    background-color: rgba(245, 247, 250, 0.8);
+    border: var(--magic-border);
+  }
+  
+  .work-item:hover {
+    border-color: var(--magic-green);
+    background-color: rgba(245, 247, 250, 0.95);
+  }
+  
+  .work-item:hover .work-title {
+    color: var(--magic-green);
+  }
+  
+  .journal-entry {
+    border-bottom-color: var(--magic-border);
+  }
+  
+  .journal-entry:hover .entry-title {
+    color: var(--magic-green);
+  }
+  
+  .magical-item.glowing::before {
+    background-color: rgba(76, 144, 87, 0.1);
+  }
+  
+  .entry-status {
+    color: var(--magic-green);
+  }
+  
+  footer::before {
+    background-image: linear-gradient(to right, transparent, var(--magic-blue), transparent);
+  }
+  
+  .theme-switcher {
+    background-color: var(--bg-secondary);
+    border: var(--border-thin);
+  }
+  
+  .theme-btn {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+    border: 1px solid var(--text-muted);
+  }
+  
+  .theme-btn:hover {
+    background-color: var(--magic-green);
+    color: white;
+  }
+  
+  .theme-btn.active {
+    border-color: var(--magic-green);
+    box-shadow: 0 0 5px var(--magic-green);
+  }
+  
+  /* Adjust scrollbar colors for light theme */
+  ::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+    background-image: linear-gradient(to bottom,
+        transparent 0%,
+        rgba(76, 144, 87, 0.05) 50%,
+        transparent 100%);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--magic-green);
+    opacity: 0.7;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--magic-deep-green);
+  }

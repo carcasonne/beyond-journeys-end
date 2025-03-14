@@ -1,0 +1,166 @@
+.banner {
+    align-items: center;
+    background-color: var(--bg-secondary);
+    background-image:
+        radial-gradient(ellipse at bottom, rgba(142, 184, 229, 0.1), transparent 70%);
+    border-bottom: var(--border-thin);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: var(--space-lg);
+    min-height: 300px;
+    width: 100%;
+    padding: var(--space-xl) var(--space-md);
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(142, 184, 229, 0.15);
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(142, 184, 229, 0.02) 50px, rgba(142, 184, 229, 0.02) 51px),
+        repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(142, 184, 229, 0.02) 50px, rgba(142, 184, 229, 0.02) 51px);
+    pointer-events: none;
+}
+
+.banner .mage-light {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            transparent 50%,
+            rgba(142, 184, 229, 0.05) 51%,
+            transparent 52%);
+    background-size: 100% 4px;
+    pointer-events: none;
+    animation: light-sweep 10s linear infinite;
+    z-index: 10;
+}
+
+.banner .dust {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAA30lEQVRoge3ZMQrCQBSE4U9SpDGdlVfw0F7BK3gNj+IZrLyCZ/AKQsZKCJtd1oA6H0yXl4FJ8/If2jRFmZ3ZLrBVSh1wAE7ABTgDszJXlvU858CkzI9lIxLSkUT0JBFdSURNy4DPNdcGOAJXoAOmwLgMMR1lUCXZN+Lwt56a+0lERxLRk0R0JRE1SURPEtGTRHQlETVJRE8S0ZNEdCURNUlETxLRk0R0JRE1SURPEtGTRHQlETV9i1wD3v/muQeOA+ptl/cu0iy4r1LqeO/C0Pi6Bel/ZHCV0jNQR3kmJp8AXJoIjRAuRAsAAAAASUVORK5CYII=');
+    background-size: 50px 50px;
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 9;
+    animation: dust 20s steps(10) infinite;
+}
+
+.banner h1 {
+    margin-bottom: var(--space-sm);
+    position: relative;
+}
+
+.subtitle {
+    color: var(--terminal-fg);
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    max-width: 600px;
+    font-style: italic;
+    position: relative;
+}
+
+.mana-orb {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--magic-blue);
+    border-radius: 50%;
+    opacity: 0.7;
+    z-index: 5;
+    animation: mana-pulse 8s infinite;
+    box-shadow: 0 0 10px rgba(142, 184, 229, 0.3);
+}
+
+.mana-orb::before,
+.mana-orb::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.mana-orb::before {
+    width: 70%;
+    height: 70%;
+    border: 1px solid var(--magic-blue);
+    animation: mana-pulse 8s infinite 1s;
+}
+
+.mana-orb::after {
+    width: 30%;
+    height: 30%;
+    background-color: var(--magic-blue);
+    animation: mana-fade 5s infinite;
+}
+
+.century-marker {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    opacity: 0.7;
+    z-index: 5;
+}
+
+.era {
+    font-family: var(--font-serif);
+    font-size: 0.8rem;
+    color: var(--terminal-dim);
+    margin-bottom: 5px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.era.current {
+    color: var(--magic-blue);
+    font-style: italic;
+    transform: scale(1.05);
+}
+
+.era.current::before {
+    content: '⁎';
+    position: absolute;
+    left: -10px;
+}
+
+.time-message {
+    position: absolute;
+    bottom: 20px;
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--magic-blue);
+    cursor: pointer;
+    z-index: 5;
+    animation: fade 8s infinite;
+}
+
+@media (max-width: 768px) {
+    .century-marker {
+        display: none;
+    }
+
+    .mana-orb {
+        display: none;
+    }
+}

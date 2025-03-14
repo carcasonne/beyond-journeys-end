@@ -1,0 +1,81 @@
+/* Frieren Winter Theme - Northern Lands */
+:root {
+    /* Color palette - frozen alps and ice caves */
+    --bg-primary: #0c1420;
+    --bg-secondary: #121c2c;
+    --bg-tertiary: #1a253a;
+    
+    --accent-primary: #c2e7ff;
+    --accent-secondary: #e8f5ff;
+    --accent-tertiary: #fffaeb;
+    
+    /* Text colors - frost and crystal */
+    --terminal-fg: #e8f5ff;
+    --terminal-bg: #0c1420;
+    --terminal-dim: #8ca6c0;
+    --terminal-highlight: #ffffff;
+    --terminal-active: #c2e7ff;
+    --terminal-hover: #e8f5ff;
+    --terminal-code: #d8e9fa;
+    
+    /* Additional text colors */
+    --text-primary: #e8f5ff;
+    --text-secondary: #c2e7ff;
+    --text-muted: #8ca6c0;
+    
+    /* Northern magic colors */
+    --magic-blue: #c2e7ff; /* ice magic */
+    --magic-purple: #d8caff; /* northern mist */
+    --magic-gold: #fffaeb; /* winter sun */
+    --magic-green: #d7f8e1; /* dormant life */
+    --spell-red: #ff9e9e; /* frostkill */
+    
+    /* Elements */
+    --border-thin: 1px solid rgba(194, 231, 255, 0.5);
+    --border-thick: 2px solid rgba(216, 202, 255, 0.6);
+    --border-dashed: 1px dashed rgba(255, 250, 235, 0.7);
+    --shadow-subtle: 0 0 8px rgba(194, 231, 255, 0.3);
+    --shadow-glow: 0 0 20px rgba(216, 202, 255, 0.5);
+    --magic-border: 0.1rem solid rgba(194, 231, 255, 0.4);
+    --magic-shadow: 0 0 15px rgba(194, 231, 255, 0.25);
+    
+    /* Animation */
+    --fade-duration: 2s;
+    --glitch-duration: 1.5s;
+  }
+  
+  /* Winter-specific elements */
+  .banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      radial-gradient(circle at 20% 80%, rgba(194, 231, 255, 0.07) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(216, 202, 255, 0.05) 0%, transparent 40%);
+    pointer-events: none;
+    z-index: 2;
+  }
+  
+  .mana-orb {
+    box-shadow: 0 0 15px rgba(194, 231, 255, 0.5);
+  }
+  
+  .time-message {
+    text-shadow: 0 0 10px rgba(194, 231, 255, 0.3);
+  }
+  
+  .work-item:hover {
+    box-shadow: 0 0 12px rgba(194, 231, 255, 0.25);
+  }
+  
+  /* Brighter scrollbar for darker background */
+  ::-webkit-scrollbar-thumb {
+    background: var(--accent-primary);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-secondary);
+  }
